@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FamDesk — Privacy Policy</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+      color: #1a1a1a;
+      background: #fff;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    h1 { font-size: 2rem; color: #008080; margin-bottom: 8px; }
+    .effective { color: #666; font-size: 0.9rem; margin-bottom: 40px; }
+    h2 { font-size: 1.25rem; margin-top: 36px; margin-bottom: 10px; color: #222; }
+    p { margin-bottom: 14px; }
+    ul { padding-left: 22px; margin-bottom: 14px; }
+    li { margin-bottom: 6px; }
+    .highlight {
+      background: #f0fafa;
+      border-left: 4px solid #008080;
+      padding: 16px 20px;
+      margin: 28px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .highlight strong { color: #008080; }
+    a { color: #008080; }
+    footer { margin-top: 60px; font-size: 0.85rem; color: #888; }
+    nav { margin-bottom: 32px; }
+    nav a { color: #008080; text-decoration: none; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <nav><a href="index.html">← Back to FamDesk</a></nav>
+
+  <h1>Privacy Policy</h1>
+  <p class="effective">Effective date: February 2026</p>
+
+  <div class="highlight">
+    <strong>Short version:</strong> FamDesk collects nothing. Your screen is shared directly with the person you invite — no servers, no recordings, no accounts.
+  </div>
+
+  <h2>Who we are</h2>
+  <p>FamDesk is a peer-to-peer family tech support app. It lets you share your screen with a trusted family member using a simple invite code.</p>
+
+  <h2>Data we collect</h2>
+  <p><strong>None.</strong> FamDesk does not collect, store, or transmit any personal data to any server we operate. There are no user accounts. There is no analytics. There is no backend database.</p>
+
+  <h2>Screen sharing</h2>
+  <p>When you start a screen share session, your screen content is transmitted <strong>directly and exclusively</strong> to the person who entered your invite code. This connection is peer-to-peer — it never passes through any FamDesk server.</p>
+  <ul>
+    <li>Screen data is not recorded.</li>
+    <li>Screen data is not stored anywhere.</li>
+    <li>No FamDesk employee or system can see your screen.</li>
+    <li>Screens containing passwords or banking apps appear <strong>black</strong> to your helper — this is enforced by Android's security system.</li>
+  </ul>
+
+  <h2>Microphone / voice</h2>
+  <p>During an active session, your microphone audio is transmitted directly to your helper via the same peer-to-peer connection. Like screen data, voice audio is:</p>
+  <ul>
+    <li>Not recorded.</li>
+    <li>Not stored.</li>
+    <li>Not transmitted to any server.</li>
+    <li>Active only while a session is live — stops immediately when you end the session.</li>
+  </ul>
+
+  <h2>Network and peer discovery</h2>
+  <p>FamDesk uses <strong>Hyperswarm</strong>, a decentralized peer-discovery network. When you generate an invite code, Hyperswarm's distributed hash table (DHT) is used to help your helper's device find yours directly.</p>
+  <p>This process is similar to how a phone call works: your IP address is shared with the person who connects to you — and only with them. No central server sees your traffic or the content of your connection.</p>
+  <p>Hyperswarm is open-source software developed by Holepunch. See <a href="https://github.com/holepunchto/hyperswarm" target="_blank">github.com/holepunchto/hyperswarm</a>.</p>
+
+  <h2>Permissions</h2>
+  <p>FamDesk requests only the permissions it needs:</p>
+  <ul>
+    <li><strong>INTERNET</strong> — Required for peer-to-peer connection via Hyperswarm DHT.</li>
+    <li><strong>RECORD_AUDIO</strong> — Required for voice during a session. Only active while a session is running.</li>
+    <li><strong>FOREGROUND_SERVICE</strong> — Required to keep the screen capture running while you use other apps.</li>
+    <li><strong>POST_NOTIFICATIONS</strong> — Required to show the "FamDesk is running" notification while a session is active (Android 13+ requirement).</li>
+  </ul>
+
+  <h2>Data retention</h2>
+  <p>There is no data to retain. FamDesk stores nothing on any server. App preferences (such as whether you're a sharer or helper) are stored only on your local device and are cleared when you uninstall the app.</p>
+
+  <h2>Children's privacy</h2>
+  <p>FamDesk is designed for adults helping family members. We do not knowingly collect information from children under 13. Because we collect no data at all, COPPA compliance is inherent.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If we ever change this policy, we will update the effective date above and post the new version here. We will not reduce your privacy protections without clearly communicating the change.</p>
+
+  <h2>Contact</h2>
+  <p>Questions? Email us: <a href="mailto:privacy@famdesk.app">privacy@famdesk.app</a></p>
+
+  <footer>
+    <p>FamDesk · <a href="index.html">famdesk.app</a> · Privacy Policy · February 2026</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>FamDesk UX Concepts</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Inter',sans-serif;background:#0a0a0f;color:#fff;min-height:100vh}
+.nav{display:flex;align-items:center;gap:8px;padding:20px 24px;background:#0a0a0f;border-bottom:1px solid rgba(255,255,255,.08);position:sticky;top:0;z-index:100}
+.nav-title{font-size:13px;color:rgba(255,255,255,.4);margin-right:8px;font-weight:500;letter-spacing:.05em;text-transform:uppercase}
+.tab{padding:7px 16px;border-radius:8px;font-size:13px;font-weight:500;cursor:pointer;border:1px solid transparent;transition:all .15s}
+.tab.active{color:#fff;border-color:rgba(255,255,255,.15)}
+.tab:not(.active){color:rgba(255,255,255,.45);background:transparent}
+.tab:not(.active):hover{color:rgba(255,255,255,.75);background:rgba(255,255,255,.05)}
+.concept{display:none;padding:32px 24px 48px}
+.concept.active{display:block}
+.concept-header{margin-bottom:36px}
+.concept-name{font-size:28px;font-weight:700;margin-bottom:8px}
+.concept-desc{font-size:15px;color:rgba(255,255,255,.55);max-width:540px;line-height:1.6}
+.screens{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:40px}
+.screen-label{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:12px}
+.screen-wrap{border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
+.palette{display:flex;gap:10px;margin-bottom:32px;flex-wrap:wrap}
+.swatch{width:48px;height:48px;border-radius:10px}
+.swatch-label{font-size:10px;color:rgba(255,255,255,.4);margin-top:5px;text-align:center;font-family:monospace}
+.swatch-wrap{display:flex;flex-direction:column;align-items:center}
+.section-title{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:16px;margin-top:32px}
+</style>
+</head>
+<body>
+<div class="nav">
+  <span class="nav-title">FamDesk UX</span>
+  <div class="tab active" onclick="show('a',this)">A · Command Center</div>
+  <div class="tab" onclick="show('b',this)">B · Warm Family</div>
+  <div class="tab" onclick="show('c',this)">C · Glass Premium</div>
+</div>
+
+<div class="concept active" id="ca">
+  <div class="concept-header">
+    <div class="concept-name" style="color:#22D3EE">A · Command Center</div>
+    <div class="concept-desc">Sharp, dense, no-nonsense. Pure function over decoration. Think VS Code + Linear. Every pixel earns its place. The pro remote support tool feel — monospace labels, tight info density, clear status hierarchy.</div>
+  </div>
+  <div class="palette">
+    <div class="swatch-wrap"><div class="swatch" style="background:#080C14"></div><div class="swatch-label">#080C14</div></div>
+    <div class="swatch-wrap"><div class="swatch" style="background:#0E1420"></div><div class="swatch-label">#0E1420</div></div>
+    <div class="swatch-wrap"><div class="swatch" style="background:#151D2E"></div><div class="swatch-label">#151D2E</div></div>
+    <div class="swatch-wrap"><div class="swatch" style="background:#1E2A3D"></div><div class="swatch-label">#1E2A3D</div></div>
+    <div class="swatch-wrap"><div class="swatch" style="background:#22D3EE"></div><div class="swatch-label">#22D3EE</div></div>
+    <div class="swatch-wrap"><div class="swatch" style="background:#22C55E"></div><div class="swatch-label">#22C55E</div></div>
+    <div class="swatch-wrap"><div class="swatch" style="background:#EF4444"></div><div class="swatch-label">#EF4444</div></div>
+  </div>
+  <div class="screens">
+    <div>
+      <div class="screen-label">Web — Connect Screen</div>
+      <div class="screen-wrap">
+        <svg viewBox="0 0 420 540" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block">
+          <rect width="420" height="540" fill="#080C14"/>
+          <rect width="420" height="44" fill="#0E1420"/>
+          <text x="16" y="27" fill="#22D3EE" font-size="13" font-weight="700" font-family="monospace">FamDesk</text>
+          <rect x="16" y="34" width="60" height="2" rx="1" fill="#22D3EE" opacity=".3"/>
+          <text x="404" y="27" fill="#334155" font-size="11" font-family="monospace" text-anchor="end">v1.3.0</text>
+          <rect x="60" y="90" width="300" height="360" rx="14" fill="#0E1420" stroke="#1E2A3D" stroke-width="1"/>
+          <rect x="189" y="116" width="42" height="42" rx="8" fill="#22D3EE" opacity=".12"/>
+          <text x="210" y="145" fill="#22D3EE" font-size="22" text-anchor="middle">◈</text>
+          <text x="210" y="180" fill="#F0F9FF" font-size="18" font-weight="700" text-anchor="middle" font-family="system-ui">FamDesk</text>
+          <text x="210" y="196" fill="#475569" font-size="11" text-anchor="middle" font-family="system-ui">Remote support — no install needed</text>
+          <line x1="80" y1="212" x2="340" y2="212" stroke="#1E2A3D" stroke-width="1"/>
+          <text x="80" y="230" fill="#64748B" font-size="10" font-family="monospace" font-weight="600" letter-spacing="1">SESSION CODE</text>
+          <rect x="80" y="238" width="260" height="46" rx="8" fill="#0A1020" stroke="#1E2A3D" stroke-width="1"/>
+          <text x="210" y="267" fill="#F0F9FF" font-size="20" font-weight="700" font-family="monospace" text-anchor="middle" letter-spacing="6">D Z R 3 Y B</text>
+          <rect x="80" y="298" width="260" height="44" rx="8" fill="#22D3EE"/>
+          <text x="210" y="325" fill="#080C14" font-size="13" font-weight="700" text-anchor="middle" font-family="system-ui">Connect →</text>
+          <rect x="80" y="354" width="126" height="36" rx="6" fill="none" stroke="#1E2A3D" stroke-width="1"/>
+          <text x="143" y="377" fill="#64748B" font-size="11" text-anchor="middle" font-family="system-ui">📷 Scan QR</text>
+          <rect x="214" y="354" width="126" height="36" rx="6" fill="none" stroke="#1E2A3D" stroke-width="1"/>
+          <text x="277" y="377" fill="#64748B" font-size="11" text-anchor="middle" font-family="system-ui">ⓘ How it works</text>
+          <text x="210" y="428" fill="#334155" font-size="10" text-anchor="middle" font-family="monospace">● READY · P2P ENCRYPTED · NO ACCOUNT</text>
+        </svg>
+      </div>
+    </div>
+    <div>
+      <div class="screen-label">Web — Active Session</div>
+      <div class="screen-wrap">
+        <svg viewBox="0 0 420 540" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block">
+          <rect width="420" height="540" fill="#080C14"/>
+          <rect width="420" height="44" fill="#0E1420"/>
+          <rect x="0" y="43" width="420" height="1" fill="#1E2A3D"/>
+          <text x="16" y="27" fill="#22D3EE" font-size="13" font-weight="700" font-family="monospace">FamDesk</text>
+          <rect x="90" y="16" width="82" height="16" rx="4" fill="#0F2A1A"/>
+          <circle cx="99" cy="24" r="3" fill="#22C55E"/>
+          <text x="106" y="28" fill="#22C55E" font-size="9" font-family="monospace" font-weight="600">LIVE · 04:32</text>
+          <rect x="280" y="16" width="32" height="14" rx="3" fill="#151D2E"/>
+          <text x="296" y="26" fill="#94A3B8" font-size="8" font-family="monospace" text-anchor="middle">29ms</text>
+          <rect x="316" y="16" width="32" height="14" rx="3" fill="#151D2E"/>
+          <text x="332" y="26" fill="#94A3B8" font-size="8" font-family="monospace" text-anchor="middle">24fps</text>
+          <rect x="352" y="14" width="52" height="18" rx="4" fill="#3F0000"/>
+          <text x="378" y="27" fill="#EF4444" font-size="9" font-family="monospace" font-weight="700" text-anchor="middle">End</text>
+          <rect x="0" y="44" width="315" height="440" fill="#000"/>
+          <rect x="40" y="80" width="235" height="380" rx="4" fill="#0E1420" opacity=".6"/>
+          <text x="157" y="230" fill="#1E2A3D" font-size="11" text-anchor="middle" font-family="monospace">WebRTC stream</text>
+          <text x="157" y="246" fill="#1E2A3D" font-size="9" text-anchor="middle" font-family="monospace">1280×720 · H.264</text>
+          <rect x="40" y="80" width="235" height="380" rx="4" fill="none" stroke="#22D3EE" stroke-width="1" opacity=".1"/>
+          <circle cx="130" cy="180" r="6" fill="none" stroke="#22D3EE" stroke-width="2" opacity=".8"/>
+          <circle cx="130" cy="180" r="2" fill="#22D3EE"/>
+          <rect x="315" y="44" width="105" height="440" fill="#0E1420"/>
+          <rect x="315" y="44" width="1" height="440" fill="#1E2A3D"/>
+          <text x="322" y="62" fill="#64748B" font-size="9" font-family="monospace" font-weight="700" letter-spacing="1">CHAT</text>
+          <rect x="322" y="68" width="90" height="24" rx="6" fill="#151D2E"/>
+          <text x="367" y="83" fill="#94A3B8" font-size="8" text-anchor="middle">Click the blue icon</text>
+          <rect x="350" y="100" width="62" height="24" rx="6" fill="#0C2340"/>
+          <text x="381" y="115" fill="#22D3EE" font-size="8" text-anchor="middle">Got it, thanks!</text>
+          <rect x="315" y="380" width="105" height="1" fill="#1E2A3D"/>
+          <text x="322" y="394" fill="#334155" font-size="8" font-family="monospace" letter-spacing="1">CONTROLS</text>
+          <text x="327" y="415" fill="#64748B" font-size="16">🎙️</text>
+          <text x="357" y="415" fill="#64748B" font-size="16">📋</text>
+          <text x="327" y="445" fill="#64748B" font-size="16">✏️</text>
+          <text x="357" y="445" fill="#22D3EE" font-size="16">📸</text>
+          <rect x="0" y="484" width="420" height="56" fill="#0E1420"/>
+          <rect x="0" y="484" width="420" height="1" fill="#1E2A3D"/>
+          <text x="16" y="516" fill="#22D3EE" font-size="14">🎙</text>
+          <text x="48" y="516" fill="#64748B" font-size="14">🔇</text>
+          <text x="80" y="516" fill="#64748B" font-size="14">📋</text>
+          <text x="112" y="516" fill="#64748B" font-size="14">✏️</text>
+          <text x="144" y="516" fill="#64748B" font-size="14">⛶</text>
+          <rect x="340" y="493" width="68" height="30" rx="6" fill="#3F0000"/>
+          <text x="374" y="512" fill="#EF4444" font-size="12" font-weight="700" text-anchor="middle">✕ End</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div class="section-title">Android screens</div>
+  <div class="screens" style="grid-template-columns:repeat(3,1fr);gap:16px">
+    <div><div class="screen-label">Home</div><div class="screen-wrap"><svg viewBox="0 0 200 360" style="width:100%;display:block"><rect width="200" height="360" fill="#080C14"/><rect width="200" height="48" fill="#0E1420"/><text x="100" y="30" fill="#22D3EE" font-size="14" font-weight="700" text-anchor="middle" font-family="monospace">FamDesk</text><text x="100" y="80" fill="#475569" font-size="10" text-anchor="middle">Choose your role</text><rect x="20" y="100" width="160" height="70" rx="10" fill="#0E1420" stroke="#1E2A3D" stroke-width="1"/><text x="100" y="135" fill="#22D3EE" font-size="20" text-anchor="middle">🛟</text><text x="100" y="155" fill="#F0F9FF" font-size="12" font-weight="600" text-anchor="middle">Give Help</text><text x="100" y="168" fill="#475569" font-size="9" text-anchor="middle">I'll help someone</text><rect x="20" y="185" width="160" height="70" rx="10" fill="#0E1420" stroke="#22D3EE" stroke-width="1"/><text x="100" y="220" fill="#22D3EE" font-size="20" text-anchor="middle">📱</text><text x="100" y="240" fill="#F0F9FF" font-size="12" font-weight="600" text-anchor="middle">Get Help</text><text x="100" y="253" fill="#475569" font-size="9" text-anchor="middle">Share my screen</text></svg></div></div>
+    <div><div class="screen-label">Sharing</div><div class="screen-wrap"><svg viewBox="0 0 200 360" style="width:100%;display:block"><rect width="200" height="360" fill="#080C14"/><rect width="200" height="48" fill="#0E1420"/><text x="16" y="30" fill="#22D3EE" font-size="12" font-weight="700" font-family="monospace">FamDesk</text><rect x="120" y="18" width="64" height="16" rx="4" fill="#0F2A1A"/><circle cx="128" cy="26" r="3" fill="#22C55E"/><text x="136" y="30" fill="#22C55E" font-size="8" font-family="monospace">LIVE</text><text x="100" y="100" fill="#22D3EE" font-size="36" text-anchor="middle">🖥</text><text x="100" y="130" fill="#64748B" font-size="10" text-anchor="middle">Sharing your screen</text><text x="100" y="150" fill="#F0F9FF" font-size="11" font-weight="600" text-anchor="middle" font-family="monospace">02:14</text><rect x="20" y="170" width="160" height="36" rx="8" fill="#151D2E"/><text x="100" y="193" fill="#94A3B8" font-size="10" text-anchor="middle">"Click the blue icon"</text><rect x="20" y="218" width="74" height="36" rx="8" fill="#0E1420" stroke="#1E2A3D" stroke-width="1"/><text x="57" y="241" fill="#64748B" font-size="10" text-anchor="middle">🎙 Mic</text><rect x="106" y="218" width="74" height="36" rx="8" fill="#3F0000" stroke="#EF4444" stroke-width="1"/><text x="143" y="241" fill="#EF4444" font-size="10" text-anchor="middle">✕ Stop</text></svg></div></div>
+    <div><div class="screen-label">Code</div><div class="screen-wrap"><svg viewBox="0 0 200 360" style="width:100%;display:block"><rect width="200" height="360" fill="#080C14"/><rect width="200" height="48" fill="#0E1420"/><text x="100" y="30" fill="#22D3EE" font-size="12" font-weight="700" text-anchor="middle" font-family="monospace">Get Help</text><text x="100" y="90" fill="#64748B" font-size="10" text-anchor="middle">Share this code</text><rect x="20" y="105" width="160" height="80" rx="12" fill="#0E1420" stroke="#22D3EE" stroke-width="1" opacity=".5"/><text x="100" y="152" fill="#22D3EE" font-size="26" font-weight="700" text-anchor="middle" font-family="monospace" letter-spacing="5">DZR3</text><text x="100" y="178" fill="#22D3EE" font-size="26" font-weight="700" text-anchor="middle" font-family="monospace" letter-spacing="5">YB9A</text><text x="100" y="215" fill="#334155" font-size="9" text-anchor="middle">Expires in 09:42</text><rect x="20" y="230" width="160" height="40" rx="8" fill="#0E1420" stroke="#1E2A3D" stroke-width="1"/><text x="100" y="255" fill="#64748B" font-size="10" text-anchor="middle">📷 QR code instead</text></svg></div></div>
+  </div>
+  <div class="section-title">Feel</div>
+  <div style="background:#0E1420;border:1px solid #1E2A3D;border-radius:12px;padding:20px;display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+    <span style="background:#0F2A1A;color:#22C55E;padding:3px 10px;border-radius:4px;font-size:11px;font-family:monospace;font-weight:600">● LIVE</span>
+    <span style="background:#0C2340;color:#22D3EE;padding:3px 10px;border-radius:4px;font-size:11px;font-family:monospace">P2P · ENCRYPTED</span>
+    <span style="background:#3F0000;color:#EF4444;padding:3px 10px;border-radius:4px;font-size:11px;font-family:monospace">END SESSION</span>
+    <span style="background:#151D2E;color:#94A3B8;padding:3px 10px;border-radius:4px;font-size:11px;font-family:monospace">29ms · 24fps · H.264</span>
+    <span style="color:#475569;font-size:12px;margin-left:8px">Monospace labels, sharp edges, dense info — professional tool energy</span>
+  </div>
+</div>
+
+<div class="concept" id="cb">
+  <div class="concept-header">
+    <div class="concept-name" style="color:#A78BFA">B · Warm Family</div>
+    <div class="concept-desc">Approachable, inviting, calm. Built for the person helping their parent — not a sysadmin. Softer dark palette with violet–indigo accents, rounder corners, more breathing room. Linear meets Notion energy.</div>
+  </div>
+  <div class="palette">
+    <div class="swatch-wrap"><div class="swatch" style="background:#0D0D14"></div><div class="swatch-label">#0D0D14</div></div>
+    <div class="swatch-wrap"><div class="swatch" style="background:#14142A"></div><div class="swatch-label">#14142A</div></div>
+    <div class="swatch-wrap"><div class="swatch" style="background:#1C1C38"></div><div class="swatch-label">#1C1C38</div></div>
+    <div class="swatch-wrap"><div class="swatch" style="background:#252550"></div><div class="swatch-label">#252550</div></div>
+    <div class="swatch-wrap"><div class="swatch" style="background:#7C3AED"></div><div class="swatch-label">#7C3AED</div></div>
+    <div class="swatch-wrap"><div class="swatch" style="background:#A78BFA"></div><div class="swatch-label">#A78BFA</div></div>
+    <div class="swatch-wrap"><div class="swatch" style="background:#34D399"></div><div class="swatch-label">#34D399</div></div>
+    <div class="swatch-wrap"><div class="swatch" style="background:#F87171"></div><div class="swatch-label">#F87171</div></div>
+  </div>
+  <div class="screens">
+    <div>
+      <div class="screen-label">Web — Connect</div>
+      <div class="screen-wrap">
+        <svg viewBox="0 0 420 540" style="width:100%;display:block">
+          <rect width="420" height="540" fill="#0D0D14"/>
+          <ellipse cx="210" cy="180" rx="200" ry="180" fill="#7C3AED" opacity=".05"/>
+          <rect width="420" height="52" fill="#14142A"/>
+          <text x="20" y="32" fill="#A78BFA" font-size="15" font-weight="700" font-family="system-ui">FamDesk</text>
+          <rect x="40" y="80" width="340" height="380" rx="20" fill="#14142A" stroke="#252550" stroke-width="1"/>
+          <rect x="181" y="104" width="58" height="58" rx="16" fill="#7C3AED" opacity=".2"/>
+          <text x="210" y="142" fill="#A78BFA" font-size="28" text-anchor="middle">🛟</text>
+          <text x="210" y="188" fill="#E0E0FF" font-size="20" font-weight="700" text-anchor="middle" font-family="system-ui">Ready to help?</text>
+          <text x="210" y="208" fill="#6B6B9A" font-size="12" text-anchor="middle" font-family="system-ui">Enter the code from their phone</text>
+          <rect x="60" y="228" width="300" height="56" rx="14" fill="#1C1C38" stroke="#252550" stroke-width="1"/>
+          <text x="210" y="264" fill="#E0E0FF" font-size="22" font-weight="700" text-anchor="middle" font-family="monospace" letter-spacing="8">DZR3YB</text>
+          <rect x="60" y="298" width="300" height="52" rx="14" fill="#7C3AED"/>
+          <text x="210" y="329" fill="#fff" font-size="14" font-weight="600" text-anchor="middle" font-family="system-ui">Connect to session →</text>
+          <line x1="60" y1="368" x2="168" y2="368" stroke="#1C1C38" stroke-width="1"/>
+          <text x="210" y="372" fill="#3A3A60" font-size="10" text-anchor="middle">or</text>
+          <line x1="252" y1="368" x2="360" y2="368" stroke="#1C1C38" stroke-width="1"/>
+          <rect x="60" y="382" width="300" height="44" rx="12" fill="#1C1C38" stroke="#252550" stroke-width="1"/>
+          <text x="210" y="409" fill="#6B6B9A" font-size="12" text-anchor="middle">📷 Scan QR code from their screen</text>
+          <text x="210" y="454" fill="#3A3A60" font-size="10" text-anchor="middle">🔒 Encrypted · No account · No servers in the middle</text>
+        </svg>
+      </div>
+    </div>
+    <div>
+      <div class="screen-label">Web — Active Session</div>
+      <div class="screen-wrap">
+        <svg viewBox="0 0 420 540" style="width:100%;display:block">
+          <rect width="420" height="540" fill="#0D0D14"/>
+          <rect width="420" height="52" fill="#14142A"/>
+          <text x="20" y="32" fill="#A78BFA" font-size="14" font-weight="700" font-family="system-ui">FamDesk</text>
+          <rect x="90" y="18" width="96" height="22" rx="11" fill="#14301A"/>
+          <circle cx="100" cy="29" r="4" fill="#34D399"/>
+          <text x="108" y="33" fill="#34D399" font-size="10" font-weight="600">Connected · 04:32</text>
+          <text x="290" y="33" fill="#3A3A60" font-size="10" font-family="monospace">29ms</text>
+          <rect x="350" y="16" width="56" height="24" rx="12" fill="#2D1228"/>
+          <text x="378" y="33" fill="#F87171" font-size="11" font-weight="600" text-anchor="middle">End</text>
+          <rect x="0" y="52" width="310" height="432" fill="#000"/>
+          <rect x="30" y="90" width="250" height="360" rx="8" fill="#14142A" opacity=".5"/>
+          <text x="155" y="260" fill="#1C1C38" font-size="10" text-anchor="middle">Remote screen</text>
+          <circle cx="100" cy="200" r="14" fill="none" stroke="#A78BFA" stroke-width="1.5" stroke-dasharray="4 3" opacity=".5"/>
+          <circle cx="100" cy="200" r="3" fill="#A78BFA" opacity=".7"/>
+          <rect x="310" y="52" width="110" height="432" fill="#14142A"/>
+          <rect x="310" y="52" width="1" height="432" fill="#1C1C38"/>
+          <text x="320" y="76" fill="#4A4A70" font-size="10" font-weight="600">Messages</text>
+          <rect x="318" y="86" width="94" height="28" rx="8" fill="#1C1C38"/>
+          <text x="365" y="103" fill="#9CA3AF" font-size="8.5" text-anchor="middle">Can you see my screen?</text>
+          <rect x="340" y="122" width="72" height="28" rx="8" fill="#4A1E8A"/>
+          <text x="376" y="139" fill="#C4B5FD" font-size="8.5" text-anchor="middle">Yes! Click the icon</text>
+          <rect x="310" y="412" width="110" height="1" fill="#1C1C38"/>
+          <text x="365" y="430" fill="#2A2A50" font-size="9" text-anchor="middle">Controls</text>
+          <text x="325" y="452" fill="#6B6B9A" font-size="15">🎙</text>
+          <text x="350" y="452" fill="#6B6B9A" font-size="15">📋</text>
+          <text x="375" y="452" fill="#6B6B9A" font-size="15">✏️</text>
+          <text x="350" y="476" fill="#6B6B9A" font-size="15">📸</text>
+          <text x="375" y="476" fill="#6B6B9A" font-size="15">⛶</text>
+          <rect x="0" y="484" width="310" height="56" fill="#14142A"/>
+          <rect x="0" y="484" width="310" height="1" fill="#1C1C38"/>
+          <text x="20" y="517" fill="#A78BFA" font-size="14">🎙</text>
+          <text x="50" y="517" fill="#6B6B9A" font-size="14">🔇</text>
+          <text x="80" y="517" fill="#6B6B9A" font-size="14">📋</text>
+          <text x="110" y="517" fill="#6B6B9A" font-size="14">✏️</text>
+          <text x="140" y="517" fill="#6B6B9A" font-size="14">⛶</text>
+          <rect x="170" y="492" width="124" height="32" rx="10" fill="#1C1C38" stroke="#252550" stroke-width="1"/>
+          <text x="232" y="512" fill="#3A3A60" font-size="10" text-anchor="middle">Type a message…</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div class="section-title">Android screens</div>
+  <div class="screens" style="grid-template-columns:repeat(3,1fr);gap:16px">
+    <div><div class="screen-label">Home</div><div class="screen-wrap"><svg viewBox="0 0 200 360" style="width:100%;display:block"><rect width="200" height="360" fill="#0D0D14"/><ellipse cx="100" cy="120" rx="120" ry="100" fill="#7C3AED" opacity=".06"/><rect width="200" height="52" fill="#14142A"/><text x="100" y="33" fill="#A78BFA" font-size="14" font-weight="700" text-anchor="middle">FamDesk</text><text x="100" y="88" fill="#4A4A70" font-size="11" text-anchor="middle">What do you need today?</text><rect x="16" y="104" width="168" height="76" rx="14" fill="#14142A" stroke="#252550" stroke-width="1"/><text x="100" y="142" fill="#A78BFA" font-size="22" text-anchor="middle">🛟</text><text x="100" y="160" fill="#E0E0FF" font-size="12" font-weight="600" text-anchor="middle">Give Help</text><text x="100" y="174" fill="#4A4A70" font-size="9" text-anchor="middle">Help a family member</text><rect x="16" y="194" width="168" height="76" rx="14" fill="#14142A" stroke="#252550" stroke-width="1"/><text x="100" y="232" fill="#A78BFA" font-size="22" text-anchor="middle">📱</text><text x="100" y="250" fill="#E0E0FF" font-size="12" font-weight="600" text-anchor="middle">Get Help</text><text x="100" y="264" fill="#4A4A70" font-size="9" text-anchor="middle">Share my screen</text></svg></div></div>
+    <div><div class="screen-label">Sharing</div><div class="screen-wrap"><svg viewBox="0 0 200 360" style="width:100%;display:block"><rect width="200" height="360" fill="#0D0D14"/><rect width="200" height="52" fill="#14142A"/><text x="20" y="33" fill="#A78BFA" font-size="13" font-weight="700">FamDesk</text><rect x="120" y="19" width="62" height="20" rx="10" fill="#14301A"/><circle cx="129" cy="29" r="4" fill="#34D399"/><text x="137" y="33" fill="#34D399" font-size="9">LIVE</text><rect x="16" y="68" width="168" height="160" rx="16" fill="#14142A" stroke="#252550" stroke-width="1"/><text x="100" y="130" fill="#A78BFA" font-size="40" text-anchor="middle">🖥</text><text x="100" y="158" fill="#9CA3AF" font-size="11" text-anchor="middle">Sharing your screen</text><text x="100" y="178" fill="#E0E0FF" font-size="14" font-weight="700" text-anchor="middle" font-family="monospace">03:22</text><rect x="16" y="242" width="168" height="38" rx="10" fill="#14142A" stroke="#1C1C38" stroke-width="1"/><text x="100" y="266" fill="#6B6B9A" font-size="9" text-anchor="middle">"Click the blue folder icon"</text><rect x="16" y="294" width="78" height="38" rx="10" fill="#1C1C38"/><text x="55" y="317" fill="#6B6B9A" font-size="10" text-anchor="middle">🎙 Mute</text><rect x="106" y="294" width="78" height="38" rx="10" fill="#2D1228"/><text x="145" y="317" fill="#F87171" font-size="10" text-anchor="middle">✕ Stop</text></svg></div></div>
+    <div><div class="screen-label">Code</div><div class="screen-wrap"><svg viewBox="0 0 200 360" style="width:100%;display:block"><rect width="200" height="360" fill="#0D0D14"/><rect width="200" height="52" fill="#14142A"/><text x="100" y="33" fill="#A78BFA" font-size="13" font-weight="700" text-anchor="middle">Get Help</text><text x="100" y="82" fill="#6B6B9A" font-size="10" text-anchor="middle">Share with your helper</text><rect x="16" y="96" width="168" height="108" rx="18" fill="#14142A" stroke="#A78BFA" stroke-width="1" opacity=".4"/><ellipse cx="100" cy="150" rx="70" ry="30" fill="#7C3AED" opacity=".08"/><text x="100" y="138" fill="#A78BFA" font-size="30" font-weight="700" text-anchor="middle" font-family="monospace" letter-spacing="5">DZR3</text><text x="100" y="170" fill="#A78BFA" font-size="30" font-weight="700" text-anchor="middle" font-family="monospace" letter-spacing="5">YB9A</text><text x="100" y="222" fill="#3A3A60" font-size="9" text-anchor="middle">Expires in 09:42</text><rect x="16" y="236" width="168" height="44" rx="12" fill="#14142A" stroke="#252550" stroke-width="1"/><text x="100" y="263" fill="#6B6B9A" font-size="10" text-anchor="middle">📷 Show QR code</text></svg></div></div>
+  </div>
+  <div class="section-title">Feel</div>
+  <div style="background:#14142A;border:1px solid #252550;border-radius:16px;padding:20px;display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+    <span style="background:#14301A;color:#34D399;padding:5px 12px;border-radius:20px;font-size:11px;font-weight:600">● Connected</span>
+    <span style="background:#4A1E8A;color:#C4B5FD;padding:5px 12px;border-radius:20px;font-size:11px">P2P Encrypted</span>
+    <span style="background:#2D1228;color:#F87171;padding:5px 12px;border-radius:20px;font-size:11px;font-weight:600">End Session</span>
+    <span style="background:#1C1C38;color:#6B6B9A;padding:5px 12px;border-radius:20px;font-size:11px">29ms · 24fps</span>
+    <span style="color:#4A4A70;font-size:12px;margin-left:8px">Pill badges, warm purple, soft corners — family-first energy</span>
+  </div>
+</div>
+
+<div class="concept" id="cc">
+  <div class="concept-header">
+    <div class="concept-name" style="background:linear-gradient(135deg,#6EE7F7,#818CF8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:inline-block">C · Glass Premium</div>
+    <div class="concept-desc">Depth, dimension, premium feel. Glassmorphism with purpose — frosted panels, gradient accents, layered shadows. Think Raycast, Arc Browser, Apple Vision. The most visually distinctive of the three.</div>
+  </div>
+  <div class="palette">
+    <div class="swatch-wrap"><div class="swatch" style="background:linear-gradient(135deg,#060814,#090B18)"></div><div class="swatch-label">BG Dark</div></div>
+    <div class="swatch-wrap"><div class="swatch" style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1)"></div><div class="swatch-label">Glass</div></div>
+    <div class="swatch-wrap"><div class="swatch" style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15)"></div><div class="swatch-label">Glass+</div></div>
+    <div class="swatch-wrap"><div class="swatch" style="background:linear-gradient(135deg,#6EE7F7,#818CF8)"></div><div class="swatch-label">Primary</div></div>
+    <div class="swatch-wrap"><div class="swatch" style="background:linear-gradient(135deg,#34D399,#059669)"></div><div class="swatch-label">Success</div></div>
+    <div class="swatch-wrap"><div class="swatch" style="background:linear-gradient(135deg,#F87171,#DC2626)"></div><div class="swatch-label">Danger</div></div>
+    <div class="swatch-wrap"><div class="swatch" style="background:rgba(110,231,247,.15);border:1px solid rgba(110,231,247,.25)"></div><div class="swatch-label">Tint</div></div>
+  </div>
+  <div class="screens">
+    <div>
+      <div class="screen-label">Web — Connect</div>
+      <div class="screen-wrap">
+        <svg viewBox="0 0 420 540" style="width:100%;display:block">
+          <defs>
+            <radialGradient id="bg1" cx="30%" cy="30%"><stop offset="0" stop-color="#1A1040" stop-opacity=".9"/><stop offset="1" stop-color="#060814"/></radialGradient>
+            <radialGradient id="glow1" cx="50%" cy="50%"><stop offset="0" stop-color="#6EE7F7" stop-opacity=".15"/><stop offset="1" stop-color="#6EE7F7" stop-opacity="0"/></radialGradient>
+            <radialGradient id="glow2" cx="50%" cy="50%"><stop offset="0" stop-color="#818CF8" stop-opacity=".12"/><stop offset="1" stop-color="#818CF8" stop-opacity="0"/></radialGradient>
+            <linearGradient id="btngrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6EE7F7"/><stop offset="1" stop-color="#818CF8"/></linearGradient>
+          </defs>
+          <rect width="420" height="540" fill="url(#bg1)"/>
+          <ellipse cx="80" cy="120" rx="160" ry="140" fill="url(#glow1)"/>
+          <ellipse cx="340" cy="420" rx="140" ry="120" fill="url(#glow2)"/>
+          <rect width="420" height="48" fill="rgba(255,255,255,.03)"/>
+          <rect x="0" y="47" width="420" height="1" fill="rgba(255,255,255,.06)"/>
+          <text x="20" y="30" font-size="15" font-weight="700" font-family="system-ui" fill="url(#btngrad)">FamDesk</text>
+          <rect x="50" y="78" width="320" height="384" rx="24" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.1)" stroke-width="1"/>
+          <rect x="181" y="102" width="58" height="58" rx="16" fill="rgba(110,231,247,.1)" stroke="rgba(110,231,247,.2)" stroke-width="1"/>
+          <text x="210" y="140" fill="url(#btngrad)" font-size="24" text-anchor="middle">◈</text>
+          <text x="210" y="186" fill="#F1F5F9" font-size="20" font-weight="700" text-anchor="middle" font-family="system-ui">FamDesk</text>
+          <text x="210" y="204" fill="rgba(255,255,255,.35)" font-size="11" text-anchor="middle">Remote support, directly from your browser</text>
+          <rect x="70" y="222" width="280" height="52" rx="14" fill="rgba(255,255,255,.06)" stroke="rgba(110,231,247,.25)" stroke-width="1"/>
+          <text x="210" y="255" fill="#F1F5F9" font-size="22" font-weight="700" text-anchor="middle" font-family="monospace" letter-spacing="7">DZR3YB</text>
+          <rect x="70" y="286" width="280" height="50" rx="14" fill="url(#btngrad)"/>
+          <text x="210" y="316" fill="#060814" font-size="14" font-weight="700" text-anchor="middle">Connect →</text>
+          <line x1="70" y1="352" x2="176" y2="352" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+          <text x="210" y="356" fill="rgba(255,255,255,.2)" font-size="10" text-anchor="middle">or</text>
+          <line x1="244" y1="352" x2="350" y2="352" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+          <rect x="70" y="366" width="280" height="44" rx="12" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+          <text x="210" y="393" fill="rgba(255,255,255,.4)" font-size="11" text-anchor="middle">📷 Scan QR code</text>
+          <text x="210" y="454" fill="rgba(255,255,255,.2)" font-size="10" text-anchor="middle">🔒 Encrypted · No account · No servers</text>
+        </svg>
+      </div>
+    </div>
+    <div>
+      <div class="screen-label">Web — Active Session</div>
+      <div class="screen-wrap">
+        <svg viewBox="0 0 420 540" style="width:100%;display:block">
+          <defs>
+            <radialGradient id="bg2" cx="20%" cy="80%"><stop offset="0" stop-color="#0F1A40"/><stop offset="1" stop-color="#060814"/></radialGradient>
+            <linearGradient id="btngrad2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6EE7F7"/><stop offset="1" stop-color="#818CF8"/></linearGradient>
+          </defs>
+          <rect width="420" height="540" fill="url(#bg2)"/>
+          <rect width="420" height="48" fill="rgba(255,255,255,.04)"/>
+          <rect x="0" y="47" width="420" height="1" fill="rgba(255,255,255,.07)"/>
+          <text x="20" y="30" font-size="14" font-weight="700" font-family="system-ui" fill="url(#btngrad2)">FamDesk</text>
+          <rect x="92" y="14" width="100" height="22" rx="11" fill="rgba(52,211,153,.1)" stroke="rgba(52,211,153,.2)" stroke-width="1"/>
+          <circle cx="103" cy="25" r="3.5" fill="#34D399"/>
+          <text x="111" y="29" fill="#34D399" font-size="9.5" font-weight="600">Live · 04:32</text>
+          <rect x="260" y="16" width="36" height="18" rx="6" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+          <text x="278" y="28" fill="rgba(255,255,255,.3)" font-size="8.5" text-anchor="middle" font-family="monospace">29ms</text>
+          <rect x="300" y="16" width="36" height="18" rx="6" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+          <text x="318" y="28" fill="rgba(255,255,255,.3)" font-size="8.5" text-anchor="middle" font-family="monospace">24fps</text>
+          <rect x="348" y="12" width="58" height="26" rx="8" fill="rgba(248,113,113,.12)" stroke="rgba(248,113,113,.25)" stroke-width="1"/>
+          <text x="377" y="29" fill="#F87171" font-size="11" font-weight="600" text-anchor="middle">End</text>
+          <rect x="0" y="48" width="308" height="436" fill="#000"/>
+          <rect x="24" y="78" width="260" height="370" rx="8" fill="rgba(255,255,255,.03)" stroke="rgba(110,231,247,.1)" stroke-width="1"/>
+          <text x="154" y="248" fill="rgba(255,255,255,.08)" font-size="10" text-anchor="middle">WebRTC stream</text>
+          <circle cx="100" cy="185" r="10" fill="rgba(110,231,247,.15)" stroke="rgba(110,231,247,.5)" stroke-width="1.5"/>
+          <circle cx="100" cy="185" r="3" fill="#6EE7F7"/>
+          <rect x="28" y="416" width="64" height="18" rx="5" fill="rgba(0,0,0,.5)"/>
+          <text x="60" y="428" fill="rgba(255,255,255,.4)" font-size="8" text-anchor="middle" font-family="monospace">29ms · H.264</text>
+          <rect x="308" y="48" width="112" height="436" fill="rgba(255,255,255,.03)"/>
+          <rect x="308" y="48" width="1" height="436" fill="rgba(255,255,255,.07)"/>
+          <text x="318" y="72" fill="rgba(255,255,255,.25)" font-size="9" font-weight="600">MESSAGES</text>
+          <rect x="315" y="80" width="97" height="28" rx="8" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+          <text x="363" y="97" fill="rgba(255,255,255,.5)" font-size="8" text-anchor="middle">Click the blue icon</text>
+          <rect x="330" y="116" width="80" height="28" rx="8" fill="rgba(110,231,247,.1)" stroke="rgba(110,231,247,.15)" stroke-width="1"/>
+          <text x="370" y="133" fill="#6EE7F7" font-size="8" text-anchor="middle">Got it, thanks!</text>
+          <rect x="308" y="408" width="112" height="1" fill="rgba(255,255,255,.06)"/>
+          <text x="364" y="426" fill="rgba(255,255,255,.15)" font-size="9" text-anchor="middle">Actions</text>
+          <text x="323" y="449" fill="rgba(255,255,255,.4)" font-size="16">🎙</text>
+          <text x="349" y="449" fill="rgba(255,255,255,.4)" font-size="16">📋</text>
+          <text x="375" y="449" fill="rgba(255,255,255,.4)" font-size="16">✏️</text>
+          <text x="349" y="476" fill="rgba(255,255,255,.4)" font-size="16">📸</text>
+          <text x="375" y="476" fill="rgba(255,255,255,.4)" font-size="16">⛶</text>
+          <rect x="0" y="484" width="308" height="56" fill="rgba(255,255,255,.03)"/>
+          <rect x="0" y="484" width="308" height="1" fill="rgba(255,255,255,.07)"/>
+          <text x="18" y="517" fill="#6EE7F7" font-size="14">🎙</text>
+          <text x="46" y="517" fill="rgba(255,255,255,.35)" font-size="14">🔇</text>
+          <text x="74" y="517" fill="rgba(255,255,255,.35)" font-size="14">📋</text>
+          <text x="102" y="517" fill="rgba(255,255,255,.35)" font-size="14">✏️</text>
+          <text x="130" y="517" fill="rgba(255,255,255,.35)" font-size="14">⛶</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div class="section-title">Android screens</div>
+  <div class="screens" style="grid-template-columns:repeat(3,1fr);gap:16px">
+    <div><div class="screen-label">Home</div><div class="screen-wrap"><svg viewBox="0 0 200 360" style="width:100%;display:block"><defs><radialGradient id="bg3" cx="40%" cy="20%"><stop offset="0" stop-color="#181040"/><stop offset="1" stop-color="#060814"/></radialGradient><linearGradient id="g3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6EE7F7"/><stop offset="1" stop-color="#818CF8"/></linearGradient></defs><rect width="200" height="360" fill="url(#bg3)"/><ellipse cx="80" cy="80" rx="100" ry="80" fill="#6EE7F7" opacity=".07"/><rect width="200" height="52" fill="rgba(255,255,255,.04)"/><text x="100" y="32" fill="url(#g3)" font-size="15" font-weight="700" text-anchor="middle">FamDesk</text><text x="100" y="84" fill="rgba(255,255,255,.3)" font-size="10" text-anchor="middle">Choose your role</text><rect x="14" y="98" width="172" height="80" rx="16" fill="rgba(255,255,255,.05)" stroke="rgba(110,231,247,.15)" stroke-width="1"/><text x="100" y="140" fill="url(#g3)" font-size="26" text-anchor="middle">🛟</text><text x="100" y="160" fill="#F1F5F9" font-size="12" font-weight="600" text-anchor="middle">Give Help</text><text x="100" y="174" fill="rgba(255,255,255,.3)" font-size="9" text-anchor="middle">Help a family member</text><rect x="14" y="192" width="172" height="80" rx="16" fill="rgba(255,255,255,.05)" stroke="rgba(129,140,248,.15)" stroke-width="1"/><text x="100" y="234" fill="url(#g3)" font-size="26" text-anchor="middle">📱</text><text x="100" y="254" fill="#F1F5F9" font-size="12" font-weight="600" text-anchor="middle">Get Help</text><text x="100" y="268" fill="rgba(255,255,255,.3)" font-size="9" text-anchor="middle">Share my screen</text></svg></div></div>
+    <div><div class="screen-label">Sharing</div><div class="screen-wrap"><svg viewBox="0 0 200 360" style="width:100%;display:block"><defs><radialGradient id="bg5" cx="60%" cy="80%"><stop offset="0" stop-color="#061A30"/><stop offset="1" stop-color="#060814"/></radialGradient><linearGradient id="g5" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6EE7F7"/><stop offset="1" stop-color="#818CF8"/></linearGradient></defs><rect width="200" height="360" fill="url(#bg5)"/><rect width="200" height="52" fill="rgba(255,255,255,.04)"/><text x="20" y="32" fill="url(#g5)" font-size="13" font-weight="700">FamDesk</text><rect x="118" y="17" width="64" height="20" rx="10" fill="rgba(52,211,153,.1)" stroke="rgba(52,211,153,.2)" stroke-width="1"/><circle cx="127" cy="27" r="3.5" fill="#34D399"/><text x="134" y="31" fill="#34D399" font-size="9">LIVE</text><rect x="14" y="68" width="172" height="172" rx="20" fill="rgba(255,255,255,.04)" stroke="rgba(110,231,247,.12)" stroke-width="1"/><ellipse cx="100" cy="154" rx="60" ry="20" fill="#6EE7F7" opacity=".07"/><text x="100" y="138" fill="url(#g5)" font-size="44" text-anchor="middle">🖥</text><text x="100" y="164" fill="rgba(255,255,255,.5)" font-size="11" text-anchor="middle">Sharing your screen</text><text x="100" y="186" fill="#F1F5F9" font-size="15" font-weight="700" text-anchor="middle" font-family="monospace">03:22</text><rect x="14" y="256" width="172" height="40" rx="12" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.07)" stroke-width="1"/><text x="100" y="280" fill="rgba(255,255,255,.4)" font-size="9" text-anchor="middle">"Click the blue folder icon"</text><rect x="14" y="308" width="80" height="36" rx="12" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.08)" stroke-width="1"/><text x="54" y="331" fill="rgba(255,255,255,.5)" font-size="10" text-anchor="middle">🎙 Mute</text><rect x="106" y="308" width="80" height="36" rx="12" fill="rgba(248,113,113,.08)" stroke="rgba(248,113,113,.2)" stroke-width="1"/><text x="146" y="331" fill="#F87171" font-size="10" text-anchor="middle">✕ Stop</text></svg></div></div>
+    <div><div class="screen-label">Code</div><div class="screen-wrap"><svg viewBox="0 0 200 360" style="width:100%;display:block"><defs><radialGradient id="bg6" cx="50%" cy="50%"><stop offset="0" stop-color="#100C30"/><stop offset="1" stop-color="#060814"/></radialGradient><linearGradient id="g6" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6EE7F7"/><stop offset="1" stop-color="#818CF8"/></linearGradient></defs><rect width="200" height="360" fill="url(#bg6)"/><ellipse cx="100" cy="150" rx="90" ry="70" fill="#818CF8" opacity=".08"/><rect width="200" height="52" fill="rgba(255,255,255,.04)"/><text x="100" y="32" fill="url(#g6)" font-size="13" font-weight="700" text-anchor="middle">Get Help</text><text x="100" y="80" fill="rgba(255,255,255,.3)" font-size="10" text-anchor="middle">Share with helper</text><rect x="14" y="94" width="172" height="120" rx="20" fill="rgba(255,255,255,.04)" stroke="rgba(110,231,247,.15)" stroke-width="1"/><text x="100" y="145" fill="url(#g6)" font-size="30" font-weight="700" text-anchor="middle" font-family="monospace" letter-spacing="5">DZR3</text><text x="100" y="178" fill="url(#g6)" font-size="30" font-weight="700" text-anchor="middle" font-family="monospace" letter-spacing="5">YB9A</text><text x="100" y="234" fill="rgba(255,255,255,.2)" font-size="9" text-anchor="middle">Expires in 09:42</text><rect x="14" y="248" width="172" height="44" rx="12" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.08)" stroke-width="1"/><text x="100" y="275" fill="rgba(255,255,255,.3)" font-size="10" text-anchor="middle">📷 Show QR code</text></svg></div></div>
+  </div>
+  <div class="section-title">Feel</div>
+  <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:16px;padding:20px;display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+    <span style="background:rgba(52,211,153,.1);color:#34D399;padding:5px 12px;border-radius:20px;font-size:11px;font-weight:600;border:1px solid rgba(52,211,153,.2)">● Live</span>
+    <span style="background:rgba(110,231,247,.1);color:#6EE7F7;padding:5px 12px;border-radius:20px;font-size:11px;border:1px solid rgba(110,231,247,.15)">P2P · Encrypted</span>
+    <span style="background:rgba(248,113,113,.08);color:#F87171;padding:5px 12px;border-radius:20px;font-size:11px;border:1px solid rgba(248,113,113,.2)">End Session</span>
+    <span style="background:rgba(255,255,255,.05);color:rgba(255,255,255,.35);padding:5px 12px;border-radius:20px;font-size:11px;border:1px solid rgba(255,255,255,.08)">29ms · 24fps</span>
+    <span style="color:rgba(255,255,255,.25);font-size:12px;margin-left:8px">Glass layers, gradient text, depth — premium product energy</span>
+  </div>
+</div>
+
+<script>
+function show(id,el){
+  document.querySelectorAll('.concept').forEach(c=>c.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.style.background='';t.style.borderColor='';t.style.color='';});
+  document.getElementById('c'+id).classList.add('active');
+  el.classList.add('active');
+  const colors={a:'rgba(34,211,238,.12)',b:'rgba(167,139,250,.12)',c:'rgba(110,231,247,.1)'};
+  const borders={a:'rgba(34,211,238,.3)',b:'rgba(167,139,250,.3)',c:'rgba(110,231,247,.25)'};
+  const txts={a:'#22D3EE',b:'#A78BFA',c:'#6EE7F7'};
+  el.style.background=colors[id];el.style.borderColor=borders[id];el.style.color=txts[id];
+}
+const first=document.querySelector('.tab.active');
+first.style.background='rgba(34,211,238,.12)';first.style.borderColor='rgba(34,211,238,.3)';first.style.color='#22D3EE';
+</script>
+</body>
+</html>

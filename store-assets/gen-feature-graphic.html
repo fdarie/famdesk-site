@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!--
+  FamDesk Feature Graphic Generator
+  ===================================
+  Renders the 1024×500 Play Store feature graphic.
+
+  HOW TO USE:
+  1. Open this file in Chrome on desktop
+  2. Open DevTools (F12) → toggle device toolbar → set Custom size: 1024 × 500
+  3. Cmd+Shift+P (or Ctrl+Shift+P) → "Capture screenshot"
+  4. Save as: docs/store-assets/feature-graphic.png
+
+  No external dependencies. Self-contained.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 1024px;
+      height: 500px;
+      overflow: hidden;
+      background: #007575;
+    }
+
+    .wrapper {
+      width: 1024px;
+      height: 500px;
+      background: linear-gradient(135deg, #006868 0%, #008f8f 60%, #00a8a8 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    }
+
+    /* Decorative circles */
+    .circle-bg {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.04);
+    }
+    .c1 { width: 520px; height: 520px; top: -80px; right: -60px; }
+    .c2 { width: 300px; height: 300px; bottom: -80px; left: -40px; }
+    .c3 { width: 180px; height: 180px; top: 60px; left: 80px; }
+
+    /* Logo + name */
+    .logo-row {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 16px;
+    }
+
+    .logo-icon {
+      width: 80px;
+      height: 80px;
+    }
+
+    .brand {
+      font-size: 72px;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -2px;
+      line-height: 1;
+    }
+
+    .tagline {
+      font-size: 28px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.92);
+      letter-spacing: 0.3px;
+      margin-bottom: 44px;
+      text-align: center;
+    }
+
+    /* Feature icons row */
+    .features {
+      display: flex;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .feature {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .feature-icon {
+      width: 52px;
+      height: 52px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+    }
+
+    .feature-label {
+      font-size: 15px;
+      color: rgba(255,255,255,0.85);
+      font-weight: 500;
+      text-align: center;
+      line-height: 1.3;
+    }
+
+    .divider {
+      width: 1px;
+      height: 48px;
+      background: rgba(255,255,255,0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="circle-bg c1"></div>
+    <div class="circle-bg c2"></div>
+    <div class="circle-bg c3"></div>
+
+    <div class="logo-row">
+      <!-- Inline SVG icon: two overlapping phone silhouettes -->
+      <svg class="logo-icon" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="40" cy="40" r="40" fill="rgba(255,255,255,0.15)"/>
+        <!-- User phone (back) -->
+        <rect x="18" y="20" width="22" height="36" rx="3" ry="3" fill="rgba(255,255,255,0.6)"/>
+        <rect x="21" y="25" width="16" height="22" rx="1.5" fill="#007575" opacity="0.7"/>
+        <rect x="25" y="50" width="8" height="2.5" rx="1.25" fill="rgba(255,255,255,0.4)"/>
+        <!-- Helper phone (front) -->
+        <rect x="33" y="25" width="22" height="36" rx="3" ry="3" fill="white"/>
+        <rect x="36" y="30" width="16" height="22" rx="1.5" fill="#007575" opacity="0.7"/>
+        <rect x="40" y="55" width="8" height="2.5" rx="1.25" fill="rgba(0,117,117,0.4)"/>
+      </svg>
+      <div class="brand">FamDesk</div>
+    </div>
+
+    <div class="tagline">See what's on her screen. Right now.</div>
+
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">📨</div>
+        <div class="feature-label">Invite code</div>
+      </div>
+      <div class="divider"></div>
+      <div class="feature">
+        <div class="feature-icon">📱</div>
+        <div class="feature-label">Screen share</div>
+      </div>
+      <div class="divider"></div>
+      <div class="feature">
+        <div class="feature-icon">🎙️</div>
+        <div class="feature-label">Voice</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

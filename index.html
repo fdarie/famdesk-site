@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="FamDesk — free screen share and voice help for family members. Helper uses a browser tab, no install. P2P encrypted, no accounts required, unlimited sessions. Works on Samsung, Motorola, and Pixel.">
+<meta name="keywords" content="remote help Android phone family, AirDroid alternative unlimited free, browser remote desktop Android, no account screen share family, P2P screen share encrypted, FamDesk TeamViewer alternative no install, Samsung Motorola remote support">
+<title>FamDesk — Family Tech Support, Simplified</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Code card: shown when ?code=XXXXXX is in URL -->
+<div id="code-banner" class="code-banner" style="display:none" role="alert" aria-live="polite">
+  <div class="code-banner-inner">
+    <p class="code-banner-label">Your helper code</p>
+    <p class="code-banner-value" id="code-value"></p>
+    <p class="code-banner-sub">Open FamDesk, tap <strong>Give Help</strong>, and enter this code to connect.</p>
+    <a id="apk-btn-top" class="btn-download" href="#download">⬇ Get the app first</a>
+  </div>
+</div>
+
+<!-- Hero -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="logo" aria-hidden="true">🖥️</div>
+    <h1>FamDesk</h1>
+    <span class="version-badge">v2.0.6 · Verified on Samsung + Motorola 🎉</span>
+    <p class="tagline">See what's on her screen. Right now.</p>
+    <p class="sub">Screen share + voice + camera with your family.<br>
+  User installs FamDesk — helper just opens a browser tab. One code.</p>
+    <div class="features">
+      <span class="chip">📱 Screen Share</span>
+      <span class="chip">🎙️ Bidirectional Voice</span>
+      <span class="chip">🔒 P2P · NOISE Encrypted</span>
+      <span class="chip">⚡ No Account Needed</span>
+      <span class="chip">🌐 Helper uses browser — zero install</span>
+      <span class="chip">📷 Camera stream</span>
+    </div>
+    <a id="apk-btn-hero" class="btn-download" href="#download">⬇ Download FamDesk (Android)</a>
+  </div>
+</header>
+
+<!-- How it works -->
+<section class="steps" aria-labelledby="steps-heading">
+  <div class="container">
+    <h2 id="steps-heading">How it works</h2>
+    <ol class="step-list">
+      <li class="step">
+        <span class="step-icon" aria-hidden="true">📱</span>
+        <div class="step-body">
+          <strong>User taps "Get Help"</strong>
+          <p>She opens FamDesk on her phone and taps the big button. A short code appears on her screen.</p>
+        </div>
+      </li>
+      <li class="step">
+        <span class="step-icon" aria-hidden="true">💬</span>
+        <div class="step-body">
+          <strong>She shares the code</strong>
+          <p>Tap "Send to Helper" — it goes via WhatsApp, SMS, or any app she already uses. Or she just reads it aloud.</p>
+        </div>
+      </li>
+      <li class="step">
+        <span class="step-icon" aria-hidden="true">🤝</span>
+        <div class="step-body">
+          <strong>You open FamDesk, enter the code</strong>
+          <p>Tap "Give Help", type the code — you're live. See her screen, guide her through anything.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- Compatibility callout -->
+<section class="compat-section" aria-labelledby="compat-heading">
+  <div class="container">
+    <h2 id="compat-heading">Why families choose FamDesk</h2>
+    <div class="compat-grid">
+      <div class="compat-card">
+        <div class="compat-icon">🚫</div>
+        <strong>No account needed — on either side</strong>
+        <p>AirDroid requires the helper to create an account and install the desktop app. FamDesk: user opens app, helper opens a browser tab. That's it.</p>
+        <span class="compat-badge compat-yes">✅ FamDesk — zero accounts</span>
+        <span class="compat-badge compat-no">⚠️ AirDroid requires helper account</span>
+      </div>
+      <div class="compat-card">
+        <div class="compat-icon">⏱️</div>
+        <strong>Unlimited session time</strong>
+        <p>AirDroid's free plan cuts your session at 10 minutes per day. FamDesk is unlimited, forever free for families — no paid tier, no countdown.</p>
+        <span class="compat-badge compat-yes">✅ FamDesk — unlimited</span>
+        <span class="compat-badge compat-no">⚠️ AirDroid free: 10 min/day cap</span>
+      </div>
+      <div class="compat-card">
+        <div class="compat-icon">🌐</div>
+        <strong>Helper uses a browser — zero install</strong>
+        <p>TeamViewer, AirDroid, AnyDesk all require the helper to install software. FamDesk helper works in any modern browser — Chrome, Safari, Firefox. No download, no update, no IT support.</p>
+        <span class="compat-badge compat-yes">✅ FamDesk — browser tab only</span>
+        <span class="compat-badge compat-no">⚠️ Others require helper app install</span>
+      </div>
+      <div class="compat-card">
+        <div class="compat-icon">🔒</div>
+        <strong>P2P — no server sees your screen</strong>
+        <p>Most remote support tools route your session through company servers. FamDesk uses Hyperswarm — the stream goes directly between devices, end-to-end NOISE encrypted. No company in the middle.</p>
+        <span class="compat-badge compat-yes">✅ FamDesk — P2P direct</span>
+        <span class="compat-badge compat-no">⚠️ Others: server-routed sessions</span>
+      </div>
+    </div>
+    <p style="text-align:center; color:#94A3B8; font-size:13px; margin-top:24px;">
+      📱 Verified working on Samsung Galaxy · Motorola Moto G · Google Pixel
+    </p>
+  </div>
+</section>
+
+<!-- Beta CTA -->
+<section class="beta-cta-section" aria-labelledby="beta-heading">
+  <div class="container">
+    <div class="beta-cta">
+      <h2 id="beta-heading">Join the Beta</h2>
+      <p>Install directly from Google Play — no sideloading, no scary dialogs.</p>
+      <a class="btn-primary" href="https://play.google.com/apps/internaltest/4701544753373320911">
+        🧪 Join Beta on Google Play
+      </a>
+      <p class="beta-note">Android 8.0+ required. Free. No account needed.</p>
+      <p class="helper-note">Are you the helper? <a href="/helper.html" class="helper-link" id="helperLink">Open Helper View in browser →</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- Download anchor -->
+<section class="download" id="download" aria-labelledby="dl-heading">
+  <div class="container">
+    <h2 id="dl-heading">Get the app</h2>
+    <p class="dl-sub">Android 8.0+. Available on Google Play beta — or download the APK directly.</p>
+    <a id="apk-btn-main" class="btn-download btn-download-lg" href="#">⬇ Download FamDesk APK</a>
+    <p class="dl-note">Direct APK: tap the button above. Enable <em>Install from unknown sources</em> in Android Settings if prompted. <strong>Google Play version coming soon for Android 14+.</strong></p>
+  </div>
+</section>
+
+<!-- Privacy -->
+<section class="privacy" aria-labelledby="priv-heading">
+  <div class="container">
+    <h2 id="priv-heading">🔒 Your privacy</h2>
+    <p>Your screen share is <strong>peer-to-peer</strong>. No servers. No recordings. No middleman. Ever.</p>
+    <p>The app uses <a href="https://hypercore-protocol.org" class="link" target="_blank" rel="noopener noreferrer">Hyperswarm</a> — a distributed, encrypted networking layer. Your data goes directly from your device to your helper's device, and nowhere else.</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <p>FamDesk is open-source. Built with ❤️ and <a href="https://pears.com" class="link" target="_blank" rel="noopener noreferrer">Pear Runtime</a>.</p>
+    <p class="footer-small">© 2026 FamDesk contributors.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var APK_URL = '/famdesk-v2.0.6.apk';
+  var APK_VERSION = '2.0.6';
+  var PACKAGE     = 'com.famdesk.app';
+  var isAndroid   = /android/i.test(navigator.userAgent);
+  var isChrome    = isAndroid && /Chrome\//.test(navigator.userAgent) && !/EdgA|OPR/.test(navigator.userAgent);
+
+  // ── intent:// URL (Chrome-native: opens app OR falls back to APK) ──────────
+  function intentUrl(schemePath) {
+    var fallback = encodeURIComponent(window.location.origin + APK_URL);
+    return 'intent://' + schemePath +
+      '#Intent;scheme=famdesk;package=' + PACKAGE +
+      ';S.browser_fallback_url=' + fallback + ';end';
+  }
+
+  // ── Probe whether FamDesk is installed ────────────────────────────────────
+  // Attempts to navigate a hidden iframe to famdesk://ping.
+  // If the app handles it, the page goes to the background (visibilitychange).
+  // Resolves true (installed) or false (not installed) after a short wait.
+  function checkInstalled() {
+    return new Promise(function (resolve) {
+      if (!isAndroid) { resolve(false); return; }
+
+      var done = false;
+      function finish(result) {
+        if (done) return;
+        done = true;
+        clearTimeout(timer);
+        document.removeEventListener('visibilitychange', onVis);
+        resolve(result);
+      }
+
+      function onVis() { if (document.hidden) finish(true); }
+      document.addEventListener('visibilitychange', onVis);
+
+      // Use a hidden iframe to probe the custom scheme without navigating the page
+      var frame = document.createElement('iframe');
+      frame.style.display = 'none';
+      frame.src = 'famdesk://ping';
+      document.body.appendChild(frame);
+      setTimeout(function () { document.body.removeChild(frame); }, 1000);
+
+      // If the app opened, visibilitychange fires quickly; otherwise timeout → not installed
+      var timer = setTimeout(function () { finish(false); }, 1200);
+    });
+  }
+
+  // ── Route a click to the right action ────────────────────────────────────
+  function handleClick(code) {
+    var path = code ? 'connect?code=' + encodeURIComponent(code) : 'open';
+    if (isChrome) {
+      // Chrome intent URL: natively opens app OR redirects to APK — no timer needed
+      window.location.href = intentUrl(path);
+    } else if (isAndroid) {
+      // Non-Chrome Android: try scheme, fallback link shown after 2s
+      window.location.href = 'famdesk://' + path;
+      setTimeout(function () {
+        if (!document.hidden) window.location.href = APK_URL;
+      }, 2000);
+    } else {
+      // Desktop / iOS: direct APK download link
+      window.location.href = APK_URL;
+    }
+  }
+
+  // ── Update all CTA buttons ────────────────────────────────────────────────
+  function updateButtons(installed, code) {
+    var label    = installed
+      ? (code ? '📱 Open FamDesk  —  ' + code : '📱 Open FamDesk')
+      : (code ? '⬇ Install FamDesk to connect' : '⬇ Install FamDesk');
+
+    document.querySelectorAll('.btn-download, .btn-primary[data-cta]').forEach(function (btn) {
+      btn.textContent = label;
+      btn.removeAttribute('href');
+      btn.style.cursor = 'pointer';
+      btn.onclick = function (e) { e.preventDefault(); handleClick(code); };
+    });
+  }
+
+  // ── Main ─────────────────────────────────────────────────────────────────
+  var params = new URLSearchParams(window.location.search);
+  var rawCode = params.get('code') || '';
+  var code = rawCode.toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 12) || null;
+
+  // Show code banner if code is present
+  if (code) {
+    var banner  = document.getElementById('code-banner');
+    var valEl   = document.getElementById('code-value');
+    if (banner && valEl) {
+      valEl.textContent = code;
+      banner.style.display = 'block';
+      banner.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  // Wire non-Android download buttons immediately (no detection needed)
+  if (!isAndroid) {
+    document.querySelectorAll('.btn-download').forEach(function (btn) {
+      btn.href = APK_URL;
+    });
+    return;
+  }
+
+  // Android: probe first, then update buttons
+  checkInstalled().then(function (installed) {
+    updateButtons(installed, code);
+  });
+})();
+
+// ── Smart install button: check local version API ──────────────────────────
+async function checkInstalledVersion() {
+  var btn = document.getElementById('apk-btn-main');
+  if (!btn) return;
+
+  function semverLt(a, b) {
+    var pa = a.split('.').map(Number), pb = b.split('.').map(Number);
+    for (var i = 0; i < 3; i++) {
+      if ((pa[i]||0) < (pb[i]||0)) return true;
+      if ((pa[i]||0) > (pb[i]||0)) return false;
+    }
+    return false;
+  }
+
+  try {
+    var ctrl = new AbortController();
+    setTimeout(function() { ctrl.abort(); }, 2000);
+    var res = await fetch('http://127.0.0.1:8765/api/version', { signal: ctrl.signal });
+    var data = await res.json();
+    if (semverLt(data.version, APK_VERSION)) {
+      btn.textContent = '\u2B06\uFE0F Update to v' + APK_VERSION + ' (installed: v' + data.version + ')';
+      btn.style.background = '#E3B341';
+      btn.style.color = '#000';
+      if (btn.tagName === 'A' || btn.href !== undefined) btn.href = APK_URL;
+    } else {
+      btn.textContent = '\u2705 Open FamDesk (v' + data.version + ')';
+      btn.style.background = '#3FB950';
+      btn.style.color = '#fff';
+      if (btn.tagName === 'A' || btn.href !== undefined)
+        btn.href = 'intent://famdesk/#Intent;scheme=famdesk;package=com.famdesk.app;end';
+    }
+  } catch(e) {
+    // Not installed — keep default download state
+  }
+}
+document.addEventListener('DOMContentLoaded', checkInstalledVersion);
+
+// ── Helper link: always pre-fill code + gateway so helper.html is ready to go ─
+(function () {
+  var params      = new URLSearchParams(window.location.search);
+  var code        = (params.get('code') || '').toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 12);
+  var gateway     = params.get('gateway') || 'ws://192.168.1.252:4001';
+  var helperEl    = document.getElementById('helperLink');
+  if (!helperEl) return;
+  var p = new URLSearchParams();
+  if (code)    p.set('code',    code);
+  p.set('gateway', gateway);
+  helperEl.href = '/helper.html?' + p.toString();
+})();
+</script>
+
+</body>
+</html>
